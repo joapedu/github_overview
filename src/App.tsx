@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import ContainerUser from './components/container';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>example</p>
+        <ContainerUser />
       </header>
     </div>
   );
