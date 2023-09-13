@@ -4,7 +4,7 @@ interface IProfile {
     bio: string,
     company: string,
     avatar_url: string,
-    public_repos: string,
+    public_repos: number,
     followers: number,
     following: number,
     location: string,

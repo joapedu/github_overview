@@ -1,5 +1,5 @@
 import { IProfile } from "./IProfileInterface";
-import { IRepo } from "./IRepoInterface";
+import { IRepos } from "./IReposInterface";
 
 export type {IProfile}
-export type {IRepo}
+export type {IRepos}

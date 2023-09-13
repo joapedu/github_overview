@@ -1,25 +1,29 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { IRepos } from "../../models";
+import { ReactElement } from "react";
 
-function CardUser() {
+interface repoListProps {
+  repos: IRepos
+}
+
+const CardUser = (props: repoListProps): ReactElement => {
   return (
-    <div style={{ display: 'flex'}} >
-    <Card style={{ maxWidth: '20rem', maxHeight: '25%', margin: '1%'}}>
-      <Card.Img variant="top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18a8ad049cf%20text%20%7B%20fill%3A%23999%3Bfont-weight%3Anormal%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18a8ad049cf%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23373940%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" />
+  <div style={{ display: 'inline'}}>
+    <Card style={{ minWidth: '20rem', minHeight: '20%', margin: '1%', background: '#F0FFFF'}} id={"asas"}>
       <Card.Body>
-        <Card.Title>Titulo do Card</Card.Title>
+        <Card.Title>{props.repos.name}</Card.Title>
         <Card.Text>
-          Texto do card de exemplo
+          {props.repos.description}
         </Card.Text>
-        <div style={{display: 'flex', marginLeft: '13%'}}>
-        <Button variant="secundary">Repositório</Button>
-        <Button variant="secundary">Live Server</Button>
+        <div style={{display: 'col', left: '40%'}}>
+          <a href={props.repos.html_url} target="_blank" rel="noopener noreferrer"><Button variant="outline-secondary">Repositório</Button></a>
+          <a href={props.repos.homepage} target="_blank" rel="noopener noreferrer"><Button variant="outline-secondary">Live Server</Button></a>
         </div>
       </Card.Body>
     </Card>
-    
-    </div>
-  );
+  </div>
+  )
 }
 
-export default CardUser;
+export default CardUser
