@@ -1,5 +1,6 @@
 interface IProfile {
     login: string,
+    html_url: string,
     name: string,
     bio: string,
     company: string,
@@ -8,7 +9,7 @@ interface IProfile {
     followers: number,
     following: number,
     location: string,
-    website: string
+    blog: string
 }
 
 export type { IProfile }
