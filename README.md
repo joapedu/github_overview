@@ -4,7 +4,7 @@
 <br/>
 
 
-## General of Projects on Github:
+## General Projects of my Github:
 - This repo include a single page application made with React
   - The page include some of my projects of github with links to repo and live server when exists.
 

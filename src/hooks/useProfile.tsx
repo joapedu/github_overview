@@ -3,7 +3,7 @@ import {OverviewService} from "../services/OverviewService";
 import {IProfile} from "../models";
 
 export const useProfile = () => {
-    const [profiles, setProfiles] = useState<IProfile[]>([])
+    const [profiles, setProfiles] = useState<IProfile>({} as IProfile)
 
     const GetProfile = useCallback(async () => {
     const { status, data } = await OverviewService.GetProfile();
