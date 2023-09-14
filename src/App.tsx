@@ -19,9 +19,9 @@ function App() {
 
     return (
     <div className="App">
-        <img src="./assets/overview.png" alt={'logo'}></img>
+        <img src="https://uploaddeimagens.com.br/images/004/607/471/full/overview.png?1694712977" alt="overview" style={{width: '20%', height: '20%'}}></img>
         <HeaderProfile profiles={profiles}/>
-        <div className="container-lg" style={{ width: '30%', marginTop: '1%'}}>
+        <div className="container-lg" style={{ width: '40%'}}>
           {repos.map((repos) => (
               <CardUser
                  key={repos.name}

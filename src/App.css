@@ -15,12 +15,22 @@ html{
   height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-link {
   color: #61dafb;
+}
+
+.accordion-button{
+  background-color: red;
+}
+
+span{
+  color: #0b6bff;
+}
+
+b{
+  color: #ff275d;
+}
+
+bdo{
+  color: #ffa500;
 }
